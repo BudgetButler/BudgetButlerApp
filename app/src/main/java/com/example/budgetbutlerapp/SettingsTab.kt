@@ -2,8 +2,11 @@ package com.example.budgetbutlerapp
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.ArrayAdapter
-import android.widget.Spinner
+import android.view.View
+import android.widget.*
+import android.widget.CompoundButton
+
+
 
 
 class SettingsTab : AppCompatActivity() {
@@ -12,6 +15,10 @@ class SettingsTab : AppCompatActivity() {
     internal lateinit var notificationspin: Spinner
     internal lateinit var countryspin: Spinner
     internal lateinit var statespin: Spinner
+    internal lateinit var customtax: EditText
+    internal lateinit var usestatetax: Switch
+    internal lateinit var currencytext: TextView
+    internal lateinit var taxtext: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings_tab2)
@@ -21,8 +28,22 @@ class SettingsTab : AppCompatActivity() {
         notificationspin = findViewById(R.id.notificationspinner) as Spinner
         countryspin = findViewById(R.id.countryspinner) as Spinner
         statespin = findViewById(R.id.statespinner) as Spinner
+        customtax = findViewById(R.id.customTax) as EditText
+        usestatetax = findViewById(R.id.taxoverride) as Switch
+        currencytext = findViewById(R.id.textView2) as TextView
+        taxtext = findViewById(R.id.taxpercenttext) as TextView
 
-
+        //Checks if the user wants to use their states tax, if not, they can set their own
+        usestatetax.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
+            if(usestatetax.isChecked){
+                customtax.isEnabled = false;
+                taxtext.setVisibility(View.INVISIBLE);
+            }
+            else {
+                customtax.isEnabled = true;
+                taxtext.setVisibility(View.VISIBLE);
+            }
+        })
         // Dropdown options for currency option
         val currency_options = arrayOf("USD", "Euro")
         val currencyadp = ArrayAdapter(this, android.R.layout.simple_list_item_1, currency_options)
