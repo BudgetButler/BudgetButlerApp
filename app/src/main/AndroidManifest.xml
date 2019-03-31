@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        //Made a new activity so users can naviagte the pages
+        <!--Made a new activity so users can naviagte the pages-->
         <activity android:name=".MainActivity"></activity>
     </application>
 
