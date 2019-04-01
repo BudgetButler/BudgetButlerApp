@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">BudgetButlerApp</string>
+    
+    <string-array name="AddTo">
+    <item>Add to</item>
+    </string-array>
+    
+    <string name="appTitle">BUDGET BUTLER</string>
+    <string name="pageTitle">Monthly Spending</string>
+    <string name="btnExpense">Add Expense</string>
+    <string name="btnExpenseTitle">btnExpenseTitle</string>
+    <string name="txtNameExpense">Item Name</string>
+    <string name="txtCost">Item Cost(9.99)</string>
 </resources>

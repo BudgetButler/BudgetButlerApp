@@ -38,7 +38,7 @@
 
     <!--Credits -->
     <TextView
-            android:text="CREATED BY: \nJoseph Kelly \n Justin Fields \n CIT295 \n2019"
+            android:text="CREATED BY: \nJoseph Kelly \n Justin Fields \n with help by:\n Nickolas Deardoff\n CIT295 \n2019"
             android:layout_width="108dp"
             android:layout_height="96dp"
             android:id="@+id/textView2"
