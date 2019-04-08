@@ -4,6 +4,46 @@
     <string-array name="AddTo">
     <item>Add to</item>
     </string-array>
+
+
+    <!-- first item is default value, rest are examples to be deleted later-->
+    <string-array name="Rent">
+        <item><b>ADD RENT</b></item>
+        <item>Apartment</item>
+        <item>storage</item>
+    </string-array>
+
+    <string-array name="Utilities">
+        <item><b>ADD UTILITIES</b></item>
+        <item>Electricity</item>
+        <item>Internet</item>
+    </string-array>
+
+    <string-array name="Food">
+        <item><b>ADD FOOD</b></item>
+        <item>Wk 1 groceries</item>
+        <item>Subway</item>
+    </string-array>
+
+    <string-array name="Purchases">
+        <item><b>ADD PURCHASES</b></item>
+        <item>Red Dead Redemption</item>
+        <item>Socks</item>
+    </string-array>
+
+    <string-array name="Subscriptions">
+        <item><b>ADD SUBSCRIPTIONS</b></item>
+        <item>Netflix</item>
+        <item>HBO Now</item>
+    </string-array>
+
+    <string-array name="Misc">
+        <item><b>ADD MISC</b></item>
+        <item>Charity</item>
+        <item>Gave Bob 20$</item>
+    </string-array>
+
+
     
     <string name="appTitle">BUDGET BUTLER</string>
     <string name="pageTitle">Monthly Spending</string>

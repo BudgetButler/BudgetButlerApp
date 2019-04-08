@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.TextView
 
 class MonthlySpendingPage : AppCompatActivity() {
 
@@ -20,9 +21,13 @@ class MonthlySpendingPage : AppCompatActivity() {
         var miscSpinner : Spinner
         var addToSpinner : Spinner
 
+        var itemName : TextView
+        var itemCost : TextView
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_monthly_spending_page)
 
+        //spinners
         rentSpinner = findViewById(R.id.RentSpinner) as Spinner
         utilSpinner = findViewById(R.id.UtilSpinner) as Spinner
         foodSpinner = findViewById(R.id.FoodSpinner) as Spinner
@@ -31,6 +36,7 @@ class MonthlySpendingPage : AppCompatActivity() {
         miscSpinner = findViewById(R.id.MiscSpinner) as Spinner
         addToSpinner  = findViewById(R.id.AddToSpinner) as Spinner
 
+        //string arrays for storage
         val rentItem = arrayOf<String>()
         val utilItem = arrayOf<String>()
         val foodItem = arrayOf<String>()
@@ -38,9 +44,12 @@ class MonthlySpendingPage : AppCompatActivity() {
         val miscItem = arrayOf<String>()
         val addToItem = arrayOf<String>()
 
+        itemName = findViewById(R.id.displayItemName)
+        itemCost = findViewById(R.id.displayItemCost)
+
 
         //set default name of
-        rentItem.set(0,"add Rent")
+        rentItem.set(0,"<b>add Rent</b>")
         utilItem.set(0,"add Util")
         foodItem.set(0,"add Food")
         subItem.set(0,"add Subscription")
@@ -50,16 +59,19 @@ class MonthlySpendingPage : AppCompatActivity() {
         rentSpinner.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,rentItem)
 
 
-            //finish later
-            //https://youtu.be/on_OrrX7Nw4
-            //
-                rentSpinner.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
+        //finish later
+        //
+        //ticket ##163988114
+        //4-7 added output (for testing)
+
+        rentSpinner.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
 
             }
 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-
+                itemName.text = rentItem.get(position)
+                itemCost.text = rentItem.get(position)
             }
         }
 
