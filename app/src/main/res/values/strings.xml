@@ -51,4 +51,8 @@
     <string name="btnExpenseTitle">btnExpenseTitle</string>
     <string name="txtNameExpense">Item Name</string>
     <string name="txtCost">Item Cost(9.99)</string>
+    <string name="Credits">CREATED BY: \nJoseph Kelly \n Justin Fields
+        \n with help by:\n Nickolas Deardoff\n CIT295 \n2019</string>
+    <string name="showItemName">Item Name</string>
+    <string name="showItemCost">Ex: 700.00</string>
 </resources>

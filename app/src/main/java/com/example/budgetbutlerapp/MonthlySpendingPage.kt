@@ -7,6 +7,8 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.TextView
+import com.example.budgetbutlerapp.R.id.displayItemCost
+import com.example.budgetbutlerapp.R.id.displayItemName
 
 class MonthlySpendingPage : AppCompatActivity() {
 
@@ -14,12 +16,12 @@ class MonthlySpendingPage : AppCompatActivity() {
 
         //variable declaration for Spinners
         var rentSpinner: Spinner
-        var utilSpinner: Spinner
-        var foodSpinner : Spinner
-        var purchasesSpinner : Spinner
-        var subscriptionsSpinner : Spinner
-        var miscSpinner : Spinner
-        var addToSpinner : Spinner
+        //var utilSpinner: Spinner
+        //var foodSpinner : Spinner
+        //var purchasesSpinner : Spinner
+        //var subscriptionsSpinner : Spinner
+        //var miscSpinner : Spinner
+        //var addToSpinner : Spinner
 
         var itemName : TextView
         var itemCost : TextView
@@ -29,12 +31,12 @@ class MonthlySpendingPage : AppCompatActivity() {
 
         //spinners
         rentSpinner = findViewById(R.id.RentSpinner) as Spinner
-        utilSpinner = findViewById(R.id.UtilSpinner) as Spinner
-        foodSpinner = findViewById(R.id.FoodSpinner) as Spinner
-        purchasesSpinner = findViewById(R.id.PurchasesSpinner) as Spinner
-        subscriptionsSpinner = findViewById(R.id.SubscriptionsSpinner) as Spinner
-        miscSpinner = findViewById(R.id.MiscSpinner) as Spinner
-        addToSpinner  = findViewById(R.id.AddToSpinner) as Spinner
+        //utilSpinner = findViewById(R.id.UtilSpinner) as Spinner
+        //foodSpinner = findViewById(R.id.FoodSpinner) as Spinner
+        //purchasesSpinner = findViewById(R.id.PurchasesSpinner) as Spinner
+        //subscriptionsSpinner = findViewById(R.id.SubscriptionsSpinner) as Spinner
+        //miscSpinner = findViewById(R.id.MiscSpinner) as Spinner
+        //addToSpinner  = findViewById(R.id.AddToSpinner) as Spinner
 
         //string arrays for storage
         val rentItem = arrayOf<String>()
@@ -44,8 +46,8 @@ class MonthlySpendingPage : AppCompatActivity() {
         val miscItem = arrayOf<String>()
         val addToItem = arrayOf<String>()
 
-        itemName = findViewById(R.id.displayItemName)
-        itemCost = findViewById(R.id.displayItemCost)
+        itemName = findViewById(displayItemName)
+        itemCost = findViewById(displayItemCost)
 
 
         //set default name of

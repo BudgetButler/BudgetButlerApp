@@ -179,6 +179,7 @@
             android:layout_marginBottom="22dp" app:layout_constraintBottom_toBottomOf="parent"
             android:autofillHints="" tools:targetApi="o"/>
     <TextView
+            android:text="@string/showItemName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/displayItemName" app:layout_constraintEnd_toStartOf="@+id/displayItemCost"
@@ -188,7 +189,7 @@
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/RentSpinner"
             android:layout_marginTop="8dp"/>
     <TextView
-            android:text=""
+            android:text="@string/showItemCost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/displayItemCost" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="59dp"
