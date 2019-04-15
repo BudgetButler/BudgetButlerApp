@@ -40,16 +40,15 @@ class SettingsTab : AppCompatActivity() {
         backbuttons = findViewById(R.id.backbutton) as Button
 
         //Checks if the user wants to use their states tax, if not, they can set their own
-        usestatetax.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
+        usestatetax.setOnCheckedChangeListener { buttonView, isChecked ->
             if(usestatetax.isChecked){
                 customtax.isEnabled = false;
                 taxtext.setVisibility(View.INVISIBLE);
-            }
-            else {
+            } else {
                 customtax.isEnabled = true;
                 taxtext.setVisibility(View.VISIBLE);
             }
-        })
+        }
         //This sends the user back to MainActivity.kt
         backbuttons.setOnClickListener{
             val intent = Intent(this,MainActivity::class.java)

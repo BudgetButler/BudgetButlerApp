@@ -14,8 +14,9 @@
                 android:label="@string/app_name"
                 />
         <!--Made a new activity so users can naviagte the pages-->
-        <activity android:name=".MonthlySpendingPage">
-        </activity>
+        <activity android:name=".MonthlySpendingPage"
+                  android:exported="true"/>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
