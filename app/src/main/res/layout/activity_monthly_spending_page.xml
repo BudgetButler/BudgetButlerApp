@@ -12,6 +12,16 @@
         android:layout_height="match_parent"
         tools:context=".MonthlySpendingPage">
 
+    <android.support.design.widget.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nav"
+            android:layout_alignParentBottom="true"
+            app:itemTextColor="#FFFFFF"
+            app:itemIconTint="#FFFFFF"
+            android:background="@color/colorPrimary"
+            app:menu="@menu/main_menu"
+            app:layout_constraintBottom_toBottomOf="parent" tools:layout_editor_absoluteX="8dp"/>
 
     <!-- Main title that is centered-->
     <TextView
@@ -48,7 +58,8 @@
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="49dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="294dp"
             android:layout_marginStart="294dp" android:layout_marginEnd="61dp" android:layout_marginRight="61dp"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="0.0"/>
 
     <!--add expense label
     ticket# 163988233 (same as above)-->
@@ -60,13 +71,14 @@
             android:layout_marginTop="612dp" app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="100dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="279dp" android:layout_marginStart="279dp" android:layout_marginEnd="50dp"
-            android:layout_marginRight="50dp" app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_marginRight="50dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"/>
 
     <!-- Rent dropdown for storage/display
     *needs default value which states "rent"*
     ticket# 163988143-->
-    <Spinner android:layout_width="100"
-             android:layout_height="50"
+    <Spinner android:layout_width="100dp"
+             android:layout_height="50dp"
              android:id="@+id/RentSpinner"
              app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="69dp"
              android:layout_marginStart="69dp" app:layout_constraintEnd_toStartOf="@+id/PurchasesSpinner"
@@ -78,8 +90,8 @@
     *needs default value which states "Utilities"*
     ticket# 163988175-->
     <Spinner
-            android:layout_width="100"
-            android:layout_height="50"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
             android:id="@+id/UtilSpinner"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="69dp" android:layout_marginStart="69dp"
@@ -92,8 +104,8 @@
     *needs default value which states "Food"*
     ticket# 163988157-->
     <Spinner
-            android:layout_width="100"
-            android:layout_height="50"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
             android:id="@+id/FoodSpinner"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="464dp" app:layout_constraintBottom_toBottomOf="parent"
@@ -105,8 +117,8 @@
     *needs default value which states "Purchases"*
     ticket# 163988193-->
     <Spinner
-            android:layout_width="100"
-            android:layout_height="50"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
             android:id="@+id/PurchasesSpinner"
             android:layout_marginTop="364dp"
             android:layout_marginEnd="76dp"
@@ -119,8 +131,8 @@
     *needs default value which states "Subscriptions"*
     ticket# 164358970-->
     <Spinner
-            android:layout_width="100"
-            android:layout_height="50"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
             android:id="@+id/SubscriptionsSpinner"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="414dp" android:layout_marginEnd="76dp" android:layout_marginRight="76dp"
@@ -132,8 +144,8 @@
     *needs default value which states "Misc"*
     ticket# 164359017-->
     <Spinner
-            android:layout_width="100"
-            android:layout_height="50"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
             android:id="@+id/MiscSpinner"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="464dp"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="217dp"

@@ -1,13 +1,36 @@
 package com.example.budgetbutlerapp
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.BottomNavigationView
+import android.view.View
 
 class MonthlySpendingPage : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_monthly_spending_page)
+
+        //#165452761
+        val navView= findViewById<View>(R.id.nav) as BottomNavigationView
+
+        navView.setOnNavigationItemSelectedListener { item ->
+            when(item.itemId){
+                R.id.home -> {
+                    val intent = Intent(this,MainActivity::class.java)
+                    startActivity(intent)
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.settings -> {
+                    val intent = Intent(this,SettingsTab::class.java)
+                    startActivity(intent)
+                    return@setOnNavigationItemSelectedListener true
+                }
+
+            }
+            return@setOnNavigationItemSelectedListener true
+        }
     }
     /*
     needs to be written in KOTLIN, currently in JAVA
