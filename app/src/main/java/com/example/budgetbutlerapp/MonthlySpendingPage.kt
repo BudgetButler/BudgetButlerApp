@@ -29,7 +29,7 @@ class MonthlySpendingPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_monthly_spending_page)
 
-        //spinners
+        //spinners of storage (name and cost of expenses)
         rentSpinner = findViewById(R.id.RentSpinner) as Spinner
         utilSpinner = findViewById(R.id.UtilSpinner) as Spinner
         foodSpinner = findViewById(R.id.FoodSpinner) as Spinner
@@ -39,7 +39,7 @@ class MonthlySpendingPage : AppCompatActivity() {
         addToSpinner  = findViewById(R.id.AddToSpinner) as Spinner
 
         //string arrays for storage
-        val rentItem = arrayOf<String>("add Rent")
+        val rentItem = arrayOf<String>()
         val utilItem = arrayOf<String>("add Util")
         val foodItem = arrayOf<String>("add Food")
         val purchaseItem = arrayListOf<String>("add Purchase")
@@ -51,14 +51,11 @@ class MonthlySpendingPage : AppCompatActivity() {
         itemCost = findViewById(displayItemCost)
 
 
-        //set default name of
-        //rentItem.set(0,"")
-        //utilItem.set(0,"add Util")
-        //foodItem.set(0,"add Food")
-        //purchaseItem.set(0,"add Purchase")
-        //subItem.set(0,"add Subscription")
-        //miscItem.set(0,"add Misc")
-        //addToItem.set(0,"Add Expense")
+
+        //rentItem[0] = Expense("add Name",0.00)
+
+
+
 
         rentSpinner.adapter = ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item,rentItem)
         utilSpinner.adapter = ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item,utilItem)
