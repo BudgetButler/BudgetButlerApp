@@ -30,6 +30,11 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                     return@setOnNavigationItemSelectedListener true
                 }
+                 R.id.totals -> {
+                     val intent = Intent(this,Totals::class.java)
+                     startActivity(intent)
+                     return@setOnNavigationItemSelectedListener true
+                 }
 
             }
             return@setOnNavigationItemSelectedListener true

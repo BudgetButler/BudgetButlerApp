@@ -5,21 +5,21 @@
         android:id="@+id/home"
         android:title="Home"
         android:icon="@drawable/house"
-        app:showAsAction="ifRoom"/>
+        />
     <item
             android:id="@+id/spend"
             android:title="Spending"
             android:icon="@drawable/spend225"
-            app:showAsAction="ifRoom"/>
+            />
     <item
             android:id="@+id/totals"
             android:title="Totals"
             android:icon="@drawable/calc225"
-            app:showAsAction="ifRoom"/>
+            />
     <item
             android:id="@+id/settings"
             android:title="Settings"
             android:icon="@drawable/settings225"
-            app:showAsAction="ifRoom"/>
+           />
 
 </menu>

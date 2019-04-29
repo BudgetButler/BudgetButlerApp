@@ -12,29 +12,21 @@
         android:layout_height="match_parent"
         tools:context=".MonthlySpendingPage">
 
+
+    <!-- Main title that is centered-->
     <android.support.design.widget.BottomNavigationView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="64dp"
             android:id="@+id/nav"
             android:layout_alignParentBottom="true"
             app:itemTextColor="#FFFFFF"
             app:itemIconTint="#FFFFFF"
             android:background="@color/colorPrimary"
             app:menu="@menu/main_menu"
-            app:layout_constraintBottom_toBottomOf="parent" tools:layout_editor_absoluteX="8dp"/>
-
-    <!-- Main title that is centered-->
-    <TextView
-            android:text="BUDGET BUTLER"
-            android:layout_width="321dp"
-            android:layout_height="55dp"
-            android:id="@+id/textView3" app:fontFamily="@font/atomic_age"
-            android:textSize="36sp"
-            android:gravity="center" android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginRight="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.432" app:layout_constraintVertical_bias="0.074"/>
+            android:layout_width="0dp"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
     <!-- Page title -->
     <TextView
             android:text="Monthly Spending"
@@ -54,12 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="631dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="49dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="294dp"
-            android:layout_marginStart="294dp" android:layout_marginEnd="61dp" android:layout_marginRight="61dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintVertical_bias="0.0"/>
+            tools:layout_editor_absoluteY="584dp" tools:layout_editor_absoluteX="289dp"/>
 
     <!--add expense label
     ticket# 163988233 (same as above)-->
@@ -67,12 +54,8 @@
             android:text="Add Expense"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/addExpense" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="612dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="100dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="279dp" android:layout_marginStart="279dp" android:layout_marginEnd="50dp"
-            android:layout_marginRight="50dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"/>
+            android:id="@+id/addExpense"
+            tools:layout_editor_absoluteY="552dp" tools:layout_editor_absoluteX="279dp"/>
 
     <!-- Rent dropdown for storage/display
     *needs default value which states "rent"*

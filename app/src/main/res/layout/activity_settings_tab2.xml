@@ -10,31 +10,22 @@
                                              android:id="@+id/linearLayout">
     //Adds navigation bar
     <android.support.design.widget.BottomNavigationView
-            android:layout_width="512dp"
-            android:layout_height="60dp"
+            android:layout_height="64dp"
             android:id="@+id/nav"
             android:layout_alignParentBottom="true"
             app:itemTextColor="#FFFFFF"
             app:itemIconTint="#FFFFFF"
             android:background="@color/colorPrimary"
             app:menu="@menu/main_menu"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="@+id/scrollView2"
-            app:layout_constraintStart_toStartOf="@+id/scrollView2"
-            app:labelVisibilityMode="labeled"
-
-    />
+            android:layout_width="0dp"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     // These spinners represent the dropdown menus
 
 
-    <Button
-            android:text="?"
-            android:layout_width="wrap_content"
-            android:layout_height="44dp"
-            android:id="@+id/button"
-            app:layout_constraintEnd_toEndOf="@+id/nav"
-            android:layout_marginEnd="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="56dp"
-            app:layout_constraintBottom_toBottomOf="@+id/nav"/>
     <TextView
             android:text="Settings"
             android:layout_width="wrap_content"
