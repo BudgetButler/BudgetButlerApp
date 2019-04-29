@@ -17,6 +17,10 @@
         <!--Made a new activity so users can naviagte the pages-->
         <activity android:name=".MonthlySpendingPage"
         android:exported="true">
+
+        </activity>
+        <activity android:name=".Totals"
+                  android:exported="true">
         </activity>
         <activity android:name=".MainActivity"
                   android:exported="true">
