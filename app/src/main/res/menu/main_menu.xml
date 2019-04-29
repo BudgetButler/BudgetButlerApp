@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    //Each item is the image used for the navigation menu
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/house"
+        />
+    <item
+            android:id="@+id/spend"
+            android:title="Spending"
+            android:icon="@drawable/spend225"
+            />
+    <item
+            android:id="@+id/totals"
+            android:title="Totals"
+            android:icon="@drawable/calc225"
+            />
+    <item
+            android:id="@+id/settings"
+            android:title="Settings"
+            android:icon="@drawable/settings225"
+           />
+
+</menu>

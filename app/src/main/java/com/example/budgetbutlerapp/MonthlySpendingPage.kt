@@ -1,7 +1,9 @@
 package com.example.budgetbutlerapp
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+<<<<<<< HEAD
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -9,6 +11,10 @@ import android.widget.Spinner
 import android.widget.TextView
 import com.example.budgetbutlerapp.R.id.displayItemCost
 import com.example.budgetbutlerapp.R.id.displayItemName
+=======
+import android.support.design.widget.BottomNavigationView
+import android.view.View
+>>>>>>> MonthlyJustin
 
 class MonthlySpendingPage : AppCompatActivity() {
 
@@ -29,6 +35,7 @@ class MonthlySpendingPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_monthly_spending_page)
 
+<<<<<<< HEAD
         //spinners of storage (name and cost of expenses)
         rentSpinner = findViewById(R.id.RentSpinner) as Spinner
         utilSpinner = findViewById(R.id.UtilSpinner) as Spinner
@@ -81,6 +88,32 @@ class MonthlySpendingPage : AppCompatActivity() {
             }
         }
 
+=======
+        //#165452761
+        val navView= findViewById<View>(R.id.nav) as BottomNavigationView
+
+        navView.setOnNavigationItemSelectedListener { item ->
+            when(item.itemId){
+                R.id.home -> {
+                    val intent = Intent(this,MainActivity::class.java)
+                    startActivity(intent)
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.settings -> {
+                    val intent = Intent(this,SettingsTab::class.java)
+                    startActivity(intent)
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.totals -> {
+                    val intent = Intent(this,Totals::class.java)
+                    startActivity(intent)
+                    return@setOnNavigationItemSelectedListener true
+                }
+
+            }
+            return@setOnNavigationItemSelectedListener true
+        }
+>>>>>>> MonthlyJustin
     }
 
 
