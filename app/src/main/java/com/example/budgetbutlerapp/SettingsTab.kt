@@ -74,17 +74,17 @@ class SettingsTab : AppCompatActivity() {
             if (usestatetax.isChecked) {
                 editor.putInt("usestatetax", 1)
                 editor.commit()
-                customtax.isEnabled = false;
-                enterbutton.isEnabled = false;
-                taxtext.setVisibility(View.INVISIBLE);
-                enterbutton.setVisibility(View.INVISIBLE);
+                customtax.isEnabled = false
+                enterbutton.isEnabled = false
+                taxtext.setVisibility(View.INVISIBLE)
+                enterbutton.setVisibility(View.INVISIBLE)
             } else {
                 editor.putInt("usestatetax", 0)
                 editor.commit()
-                customtax.isEnabled = true;
-                enterbutton.isEnabled = true;
-                taxtext.setVisibility(View.VISIBLE);
-                enterbutton.setVisibility(View.VISIBLE);
+                customtax.isEnabled = true
+                enterbutton.isEnabled = true
+                taxtext.setVisibility(View.VISIBLE)
+                enterbutton.setVisibility(View.VISIBLE)
             }
         })
 

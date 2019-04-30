@@ -12,8 +12,7 @@
         android:layout_height="match_parent"
         tools:context=".MonthlySpendingPage">
 
-
-    <!-- Main title that is centered-->
+    //Adds the navigation bar
     <android.support.design.widget.BottomNavigationView
             android:layout_height="64dp"
             android:id="@+id/nav"
@@ -27,113 +26,184 @@
             android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- Main title that is centered-->
+    <TextView
+            android:text="@string/appTitle"
+            android:layout_width="321dp"
+            android:layout_height="55dp"
+            android:id="@+id/appTitle" app:fontFamily="@font/atomic_age"
+            android:textSize="36sp"
+            android:gravity="center"
+            android:textColor="@color/colorAccent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginTop="36dp"
+            app:layout_constraintTop_toTopOf="parent"
+    />
     <!-- Page title -->
     <TextView
-            android:text="Monthly Spending"
+            android:text="@string/pageTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView4" android:textSize="24sp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintVertical_bias="0.152"/>
+            android:id="@+id/pageTitle" android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/appTitle"/>
 
     <!-- Add expense button
     ticket# 163988233-->
     <ImageButton
             android:src="@android:drawable/ic_input_add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton"
-            tools:layout_editor_absoluteY="584dp" tools:layout_editor_absoluteX="289dp"/>
+            android:layout_width="75dp"
+            android:layout_height="46dp"
+            android:id="@+id/addButton"
+            android:contentDescription="@string/btnExpenseTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.789" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.115"/>
 
     <!--add expense label
     ticket# 163988233 (same as above)-->
     <TextView
-            android:text="Add Expense"
+            android:text="@string/btnExpense"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="27dp"
             android:id="@+id/addExpense"
-            tools:layout_editor_absoluteY="552dp" tools:layout_editor_absoluteX="279dp"/>
+            android:textColor="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0.498" android:layout_marginTop="200dp"
+            app:layout_constraintTop_toBottomOf="@+id/Expenses"/>
 
     <!-- Rent dropdown for storage/display
     *needs default value which states "rent"*
     ticket# 163988143-->
-    <Spinner android:layout_width="100dp"
-             android:layout_height="50dp"
-             android:id="@+id/RentSpinner"
-             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="69dp"
-             android:layout_marginStart="69dp" app:layout_constraintEnd_toStartOf="@+id/PurchasesSpinner"
-             android:layout_marginEnd="66dp" android:layout_marginRight="66dp" android:layout_marginTop="365dp"
-             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-             android:layout_marginBottom="316dp"/>
+    <Spinner android:layout_width="300dp"
+             android:layout_height="47dp"
+             android:id="@+id/Expenses"
+             android:alwaysDrawnWithCache="false"
+             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+             android:layout_marginRight="8dp" android:layout_marginTop="12dp"
+             app:layout_constraintTop_toBottomOf="@+id/displayItemName" app:layout_constraintHorizontal_bias="0.494"/>
 
     <!--Utilities dropdown for storage/display
     *needs default value which states "Utilities"*
     ticket# 163988175-->
-    <Spinner
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:id="@+id/UtilSpinner"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="69dp" android:layout_marginStart="69dp"
-            app:layout_constraintEnd_toStartOf="@+id/SubscriptionsSpinner" android:layout_marginEnd="66dp"
-            android:layout_marginRight="66dp" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="414dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="267dp"/>
 
     <!--Food dropdown for storage/display
     *needs default value which states "Food"*
     ticket# 163988157-->
-    <Spinner
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:id="@+id/FoodSpinner"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="464dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="217dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="69dp" android:layout_marginStart="69dp" android:layout_marginEnd="242dp"
-            android:layout_marginRight="242dp" app:layout_constraintEnd_toEndOf="parent"/>
 
     <!--Purchases dropdown for storage/display
     *needs default value which states "Purchases"*
     ticket# 163988193-->
-    <Spinner
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:id="@+id/PurchasesSpinner"
-            android:layout_marginTop="364dp"
-            android:layout_marginEnd="76dp"
-            android:layout_marginRight="76dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/RentSpinner"
-            android:layout_marginBottom="317dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
 
     <!--Subscriptions dropdown for storage/display
     *needs default value which states "Subscriptions"*
     ticket# 164358970-->
-    <Spinner
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:id="@+id/SubscriptionsSpinner"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="414dp" android:layout_marginEnd="76dp" android:layout_marginRight="76dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="235dp" android:layout_marginStart="235dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="267dp"/>
 
     <!--Misc dropdown for storage/display
     *needs default value which states "Misc"*
     ticket# 164359017-->
+
+    <!-- Dropdown to select which storage dropdown to store expense to
+    ticket ##164853881-->
     <Spinner
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:id="@+id/MiscSpinner"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="464dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="217dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="235dp"
-            android:layout_marginStart="235dp" android:layout_marginEnd="76dp" android:layout_marginRight="76dp"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_width="137dp"
+            android:layout_height="49dp"
+            android:id="@+id/AddToSpinner"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/entryItemCost"/>
+    <EditText
+            android:layout_width="139dp"
+            android:layout_height="45dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/entryItemName"
+            android:hint="@string/txtNameExpense"
+            android:importantForAutofill="no" tools:targetApi="o"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.496" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/addExpense"/>
+    <EditText
+            android:layout_width="139dp"
+            android:layout_height="49dp"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/entryItemCost"
+            android:hint="@string/txtCost"
+            android:autofillHints="" tools:targetApi="o"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.503"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/entryItemName"/>
+    <TextView
+            android:text="@string/showItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:id="@+id/displayItemName"
+            android:textColor="@color/colorAccent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/pageTitle" app:layout_constraintHorizontal_bias="0.498"/>
+    <TextView
+            android:text="@string/showItemCost"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:id="@+id/displayItemCost"
+            android:textColor="@color/colorAccent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.185" android:layout_marginTop="252dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:text=""
+            android:textAlignment="center"
+            android:layout_width="112dp"
+            android:layout_height="23dp"
+            android:id="@+id/displayCost" android:visibility="visible" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/displayItemCost" app:layout_constraintHorizontal_bias="0.176"/>
+    <TextView
+            android:text="Transaction Type"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:id="@+id/textView14" android:textColor="@color/colorAccent"
+            android:textSize="14sp" android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.831" android:layout_marginTop="252dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:text=""
+            android:textAlignment="center"
+            android:layout_width="117dp"
+            android:layout_height="24dp"
+            android:id="@+id/displayType"
+            android:visibility="visible"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.856"/>
 
 </android.support.constraint.ConstraintLayout>
